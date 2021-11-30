@@ -43,6 +43,7 @@
     ],
     "books":[
         {
+            "id": 1,
             "isbn":"9781593279509",
             "title":"Eloquent JavaScript, Third Edition",
             "subtitle":"A Modern Introduction to Programming",
@@ -54,6 +55,7 @@
             "website":"http://eloquentjavascript.net/"
         },
         {
+            "id": 2,
             "isbn":"9781491943533",
             "title":"Practical Modern JavaScript",
             "subtitle":"Dive into ES6 and the Future of JavaScript",
@@ -65,6 +67,7 @@
             "website":"https://github.com/mjavascript/practical-modern-javascript"
         },
         {
+            "id": 3,
             "isbn":"9781593277574",
             "title":"Understanding ECMAScript 6",
             "subtitle":"The Definitive Guide for JavaScript Developers",
@@ -76,6 +79,7 @@
             "website":"https://leanpub.com/understandinges6/read"
         },
         {
+            "id": 4,
             "isbn":"9781449365035",
             "title":"Speaking JavaScript",
             "subtitle":"An In-Depth Guide for Programmers",
@@ -87,6 +91,7 @@
             "website":"http://speakingjs.com/"
         },
         {
+            "id": 5,
             "isbn":"9781449331818",
             "title":"Learning JavaScript Design Patterns",
             "subtitle":"A JavaScript and jQuery Developer's Guide",
@@ -98,6 +103,7 @@
             "website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"
         },
         {
+            "id": 6,
             "isbn":"9798602477429",
             "title":"You Don't Know JS Yet",
             "subtitle":"Get Started",
@@ -109,6 +115,7 @@
             "website":"https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started"
         },
         {
+            "id": 7,
             "isbn":"9781484200766",
             "title":"Pro Git",
             "subtitle":"Everything you neeed to know about Git",
@@ -120,6 +127,7 @@
             "website":"https://git-scm.com/book/en/v2"
         },
         {
+            "id": 8,
             "isbn":"9781484242216",
             "title":"Rethinking Productivity in Software Engineering",
             "subtitle":"",
