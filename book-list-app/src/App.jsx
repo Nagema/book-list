@@ -1,4 +1,5 @@
 
+import React, { Fragment } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,17 +7,23 @@ import {
 } from "react-router-dom";
 import { BookList } from './components/BookList';
 import { BookDetail } from './components/BookDetail';
-import React from 'react';
+import { CreateForm } from './components/CreateForm';
 import './App.css';
 
 function App() {
     return (
       <Router>
-        <div className="App">
+        <div className="container">
           <Routes>
             <Route path="/bookList/:id" element={ <BookDetail /> }>
             </Route>
-            <Route path="/" element={ <BookList /> }>
+            <Route path="/" 
+              element={ 
+                <Fragment>
+                  <CreateForm />
+                  <BookList /> 
+                </Fragment>
+              }>
             </Route>
           </Routes>
         </div>

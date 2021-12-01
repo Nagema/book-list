@@ -19,19 +19,17 @@ export function BookDetail() {
       }, [id])
 
       return (
-          <div>
-              <header className="App-header">
-                <Card style={{ width: '18rem' }}>
+          <div className="detail">
+            <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={logo} style={{ height: '20rem' }} />
                 <Card.Body>
                     <Card.Title>{book.title}</Card.Title>
                     <Card.Text>
-                    {book.description}
+                        {book.description}
                     </Card.Text>
                     <Button variant="primary">Go to website</Button>
                 </Card.Body>
-                </Card>
-            </header>
+            </Card>
           </div>
       )
 }

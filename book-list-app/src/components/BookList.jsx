@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export function BookList() {
@@ -17,17 +18,17 @@ export function BookList() {
     
       return (
           <div>
-              <ul>
+              <ListGroup>
                  {
                      bookList.map(item => (
-                         <li key={item.id}>
+                        <ListGroup.Item key={item.id}>
                              <Link to={`/bookList/${item.id}`}>
                                 {item.title}
                              </Link>
-                        </li>
+                        </ListGroup.Item>
                      ))
                  }
-              </ul>
+              </ListGroup>
           </div>
       )
 }
