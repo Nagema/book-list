@@ -21,7 +21,7 @@ export function BookDetail() {
       return (
           <div className="detail">
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={logo} style={{ height: '20rem' }} />
+                <Card.Img variant="top" src={book.image} style={{ height: '20rem' }} />
                 <Card.Body>
                     <Card.Title>{book.title}</Card.Title>
                     <Card.Text>
