@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Row, Button } from 'react-bootstrap';
 
-export function CreateForm() {
+export function CreateForm(props) {
 
   const [bookdata, setBookData] = useState({
     book: '',
@@ -20,14 +20,7 @@ export function CreateForm() {
         title: bookdata.book, 
         id: bookdata.id 
       };
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    };
-    fetch("http://localhost:3001/books", requestOptions)
-      .then(response => response.json())
-      .then(res => console.log(res));
+      props.createBook(data);
 }
 
       return (

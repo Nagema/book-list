@@ -1,13 +1,12 @@
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import { BookList } from './components/BookList';
 import { BookDetail } from './components/BookDetail';
-import { CreateForm } from './components/CreateForm';
+import { BookPage } from './components/BookPage';
 import './App.css';
 
 function App() {
@@ -18,12 +17,7 @@ function App() {
             <Route path="/bookList/:id" element={ <BookDetail /> }>
             </Route>
             <Route path="/" 
-              element={ 
-                <Fragment>
-                  <CreateForm />
-                  <BookList /> 
-                </Fragment>
-              }>
+              element={ <BookPage /> }>
             </Route>
           </Routes>
         </div>
