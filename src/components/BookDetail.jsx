@@ -30,9 +30,7 @@ export function BookDetail() {
                         ISBN: {book.isbn}
                     </Card.Text>
                     <ButtonGroup vertical>       
-                        <Button className="mb-3" variant="primary">
-                             <a href={book.website}>More info</a>
-                        </Button>
+                        <Button className="mb-3" href={book.website}>More info</Button> 
                         <Button className="mb-3" variant="secondary">update info</Button>
                     </ButtonGroup>
                 </Card.Body>
