@@ -18,7 +18,7 @@ export function CreateForm() {
     event.preventDefault()
     const data = { 
         title: bookdata.book, 
-        author: bookdata.author 
+        id: bookdata.id 
       };
     const requestOptions = {
       method: "POST",
