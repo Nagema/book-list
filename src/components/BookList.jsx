@@ -6,15 +6,15 @@ export function BookList() {
 
     const [bookList, setBooks] = useState([])
 
-    useEffect(() => {
-        fetchData()
-      }, [])
-
     const fetchData = async () => {
-        const data = await fetch('https://my-json-server.typicode.com/Nagema/book-list/books');
+        const data = await fetch('http://localhost:3001/books');
         const books = await data.json()
         setBooks(books)
-      }
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
     
       return (
           <div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../logo.svg';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, ButtonGroup } from 'react-bootstrap';
 import '../App.css';
 import { useParams } from 'react-router';
 
@@ -11,7 +10,7 @@ export function BookDetail() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await fetch(`https://my-json-server.typicode.com/Nagema/book-list/books/${id}`);
+            const data = await fetch(`http://localhost:3001/books/${id}`);
             const bookData = await data.json()
             setBookDetail(bookData)
           }
@@ -27,7 +26,15 @@ export function BookDetail() {
                     <Card.Text>
                         {book.description}
                     </Card.Text>
-                    <Button variant="primary">Go to website</Button>
+                    <Card.Text>
+                        ISBN: {book.isbn}
+                    </Card.Text>
+                    <ButtonGroup vertical>       
+                        <Button className="mb-3" variant="primary">
+                             <a href={book.website}>More info</a>
+                        </Button>
+                        <Button className="mb-3" variant="secondary">update info</Button>
+                    </ButtonGroup>
                 </Card.Body>
             </Card>
           </div>
