@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Card, Button, Form } from 'react-bootstrap';
 import '../App.css';
 import { useParams } from 'react-router';
+import { useNavigate } from "react-router-dom";
 
 export function UpdateInfo() {
 
     const { id } = useParams()
     const [book, setBookDetail] = useState({})
+    const navigate = useNavigate();
 
     const handleInputChange = (event) => {
         setBookDetail({
@@ -24,6 +26,9 @@ export function UpdateInfo() {
           };
           fetch(`http://localhost:3001/books/${id}`, requestOptions)
             .then(response => response.json())
+            .then(() => {
+                navigate(`/bookList/${id}`);
+            })
     }  
 
     useEffect(() => {
