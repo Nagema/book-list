@@ -33,8 +33,8 @@ export function BookDetail() {
                     <ButtonGroup vertical>       
                         <Button className="mb-3" href={book.website}>More info</Button> 
                         <Button className="mb-3" variant="outline-primary">
-                            <Link to={`/bookDetail/${book.id}/edit`} style={{textDecoration: 'none'}}>
-                                update info
+                            <Link to={`/bookDetail/${book.id}/edit`} style={{textDecoration: 'none'}} replace>
+                                Edit
                             </Link>
                         </Button>
                     </ButtonGroup>

@@ -15,7 +15,7 @@ function App() {
       <Router>
         <div className="container">
           <Routes>
-            <Route path="/bookList/:id" element={ <BookDetail /> }>
+            <Route path="/bookDetail/:id" element={ <BookDetail /> }>
             </Route>
             <Route path="/bookDetail/:id/edit" element={ <UpdateInfo /> }>
             </Route>

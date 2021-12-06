@@ -27,7 +27,7 @@ export function UpdateInfo() {
           fetch(`http://localhost:3001/books/${id}`, requestOptions)
             .then(response => response.json())
             .then(() => {
-                navigate(`/bookList/${id}`);
+                navigate(`/bookDetail/${id}`, {replace: true});
             })
     }  
 
