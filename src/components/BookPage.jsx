@@ -4,35 +4,35 @@ import { CreateForm } from './CreateForm';
 
 export function BookPage() {
 
-    const [bookList, setBooks] = useState([])
+  const [bookList, setBooks] = useState([])
 
-    const fetchData = async () => {
-        const data = await fetch('http://localhost:3001/books');
-        const books = await data.json()
-        setBooks(books)
-    }
+  const fetchData = async () => {
+    const data = await fetch('http://localhost:3001/books');
+    const books = await data.json()
+    setBooks(books)
+  }
 
-    useEffect(() => {
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const createBook = (data) => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    };
+    fetch("http://localhost:3001/books", requestOptions)
+      .then(response => response.json())
+      .then(() => {
         fetchData()
-    }, [])
+      });
+  }
 
-    const createBook = (data) => {
-        const requestOptions = {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-          };
-          fetch("http://localhost:3001/books", requestOptions)
-            .then(response => response.json())
-            .then(res => {
-                fetchData()
-            });
-    }
-    
-      return (
-          <div>
-            <CreateForm createBook={createBook} />
-            <BookList bookList={bookList}/> 
-          </div>
-      )
+  return (
+    <div>
+      <CreateForm createBook={createBook} />
+      <BookList bookList={bookList} />
+    </div>
+  )
 }
