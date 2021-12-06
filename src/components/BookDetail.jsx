@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Button, ButtonGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import { useParams } from 'react-router';
 
@@ -19,7 +20,7 @@ export function BookDetail() {
 
       return (
           <div className="detail">
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem' }}> 
                 <Card.Img variant="top" src={book.image} style={{ height: '20rem' }} />
                 <Card.Body>
                     <Card.Title>{book.title}</Card.Title>
@@ -31,7 +32,11 @@ export function BookDetail() {
                     </Card.Text>
                     <ButtonGroup vertical>       
                         <Button className="mb-3" href={book.website}>More info</Button> 
-                        <Button className="mb-3" variant="secondary">update info</Button>
+                        <Button className="mb-3" variant="secondary">
+                            <Link to={`/bookDetail/${book.id}/edit`}>
+                                update info
+                            </Link>
+                        </Button>
                     </ButtonGroup>
                 </Card.Body>
             </Card>

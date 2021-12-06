@@ -18,7 +18,8 @@ export function CreateForm(props) {
     event.preventDefault()
     const data = { 
         title: bookdata.book, 
-        id: bookdata.id 
+        id: bookdata.id,
+        author: bookdata.author 
       };
       props.createBook(data);
 }
