@@ -7,7 +7,7 @@ export function BookPage() {
   const [bookList, setBooks] = useState([])
 
   const fetchData = async () => {
-    const data = await fetch('http://localhost:3001/books');
+    const data = await fetch(`${process.env.REACT_APP_API}/api/books`);
     const books = await data.json()
     setBooks(books)
   }
@@ -22,7 +22,7 @@ export function BookPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     };
-    fetch("http://localhost:3001/books", requestOptions)
+    fetch(`${process.env.REACT_APP_API}/api/books`, requestOptions)
       .then(response => response.json())
       .then(() => {
         fetchData()

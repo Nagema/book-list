@@ -16,6 +16,6 @@ You will also see any lint errors in the console.
 
 ### `npm run web`
 
-Open [http://localhost:3001/books](http://localhost:3001/books) to view API endpoint in the browser.
+Open [http://localhost:3001/api/books](http://localhost:3001/api/books) to view API endpoint in the browser.
 
 The page will reload if you make edits.\

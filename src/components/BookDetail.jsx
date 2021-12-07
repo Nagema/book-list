@@ -11,7 +11,7 @@ export function BookDetail() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(`http://localhost:3001/books/${id}`);
+      const data = await fetch(`${process.env.REACT_APP_API}/api/books/${id}`);
       const bookData = await data.json()
       setBookDetail(bookData)
     }
@@ -35,7 +35,7 @@ export function BookDetail() {
             <Button className="mb-3" variant="outline-primary">
               <Link to={`/bookDetail/${book.id}/edit`} style={{ textDecoration: 'none' }} replace>
                 Edit
-                            </Link>
+              </Link>
             </Button>
           </ButtonGroup>
         </Card.Body>

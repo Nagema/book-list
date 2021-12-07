@@ -18,9 +18,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "REACT_APP_API=http://localhost:3001 react-scripts start",
     "web": "node server.js --no-cors",
-    "build": "react-scripts build",
+    "build": "REACT_APP_API= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

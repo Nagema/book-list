@@ -24,7 +24,7 @@ export function UpdateInfo() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(book)
     };
-    fetch(`http://localhost:3001/books/${id}`, requestOptions)
+    fetch(`${process.env.REACT_APP_API}/api/books/${id}`, requestOptions)
       .then(response => response.json())
       .then(() => {
         navigate(`/bookDetail/${id}`, { replace: true });
@@ -33,7 +33,7 @@ export function UpdateInfo() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(`http://localhost:3001/books/${id}`);
+      const data = await fetch(`${process.env.REACT_APP_API}/api/books/${id}`);
       const bookData = await data.json()
       setBookDetail(bookData)
     }
